@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.Assert.assertTrue;
 public class TopKTest {
     TopK topK;
 
@@ -23,10 +24,23 @@ public class TopKTest {
             "Y"
         });
         List<HeavyHitter> heavyHitters = topK.getTopK(events, 3);
-        // for(HeavyHitter heavyHitter : heavyHitters) {
-        //     System.out.printf("%s - %d\n", heavyHitter.getId(), heavyHitter.getFrequency());
-        // }
-        
-        // System.out.println();
+        assertTrue("There are 3 heavy hitters", heavyHitters.size() == 3);
+
+        for(HeavyHitter heavyHitter : heavyHitters) {
+            switch (heavyHitter.getId()) {
+                case "B" : {
+                    assertTrue("4 B", heavyHitter.getFrequency()==4);
+                    break;
+                }
+                case "C" : {
+                    assertTrue("5 C", heavyHitter.getFrequency()==5);
+                    break;
+                }
+                case "K" : {
+                    assertTrue("6 K", heavyHitter.getFrequency()==6);
+                    break;
+                }
+            } 
+        }
     }
 }
