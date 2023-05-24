@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "com.app.Example",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.app.Main",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "TopK",
+            "request": "launch",
+            "mainClass": "com.app.TopK",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "com.app.App",
@@ -14,7 +35,7 @@
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
-            "mainClass": "com.mycompany.app.App",
+            "mainClass": "com.app.Main",
             "args": "",
             "projectName": "my-app"
         }
